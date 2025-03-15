@@ -1,0 +1,467 @@
+Message-ID: <1775132729.1.1742024750767@ea4321665c95>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_0_107126640.1742024750741"
+
+------=_Part_0_107126640.1742024750741
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>MVVM Pattern for a Video Streaming Application</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>MVVM Pattern for a Video Streaming Application</h1>
+    <div class=3D"Section1">
+        <ul>
+<li>
+<p><strong>Model</strong>: This represents the core logic, including the vi=
+deo stream, network communication, and any backend data processing (e.g., s=
+treaming from a server, decoding, etc.).</p></li>
+<li>
+<p><strong>View</strong>: The UI that users interact with. It shows the vid=
+eo stream and allows for user interaction such as play, pause, volume contr=
+ol, etc.</p></li>
+<li>
+<p><strong>ViewModel</strong>: The bridge between the View and Model. It pr=
+ocesses the data from the Model and formats it for the View, while also han=
+dling user commands and passing them to the Model</p></li>
+</ul>
+<h3 id=3D"MVVMPatternforaVideoStreamingApplication-KeyComponentsinaVideoStr=
+eamingApplication">Key Components in a Video Streaming Application</h3>
+<ol start=3D"1">
+<li>
+<p><strong>Model</strong>:</p>
+<ul>
+<li>
+<p><code>StreamReceiver</code>: Handles receiving the video stream from a n=
+etwork source (e.g., via RTSP, HTTP).</p></li>
+<li>
+<p><code>VideoDecoder</code>: Decodes the video stream into a displayable f=
+ormat.</p></li>
+<li>
+<p><code>StreamData</code>: Stores and processes video frames.</p></li>
+</ul></li>
+<li>
+<p><strong>View</strong>:</p>
+<ul>
+<li>
+<p><code>MainWindow</code>: The user interface that displays the video, con=
+trols playback, etc.</p></li>
+<li>
+<p><code>VideoWidget</code>: A custom widget to display the video stream.</=
+p></li>
+</ul></li>
+<li>
+<p><strong>ViewModel</strong>:</p>
+<ul>
+<li>
+<p><code>VideoViewModel</code>: Acts as an intermediary, binding the Model =
+to the View, managing playback states, and translating user actions into co=
+mmands for the Model.</p></li>
+</ul></li>
+</ol>
+<h3 id=3D"MVVMPatternforaVideoStreamingApplication-UMLDiagramforaVideoStrea=
+mingApplicationinMVVM">UML Diagram for a Video Streaming Application in MVV=
+M</h3>
+<p>Here=E2=80=99s a UML diagram that shows the structure for such an applic=
+ation.</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">plainte=
+xt</pre>
+</div>
+</div>
+<p>Copy</p>
+<p><code>+-------------------------+ +--------------------------+ +--------=
+-----------------+ | StreamReceiver |&lt;------&gt;| VideoViewModel |&lt;--=
+----&gt;| MainWindow | +-------------------------+ +-----------------------=
+---+ +-------------------------+ | - streamData | | - streamReceiver | | - =
+playButton | | - streamStatus | | - videoWidget | | - pauseButton | | + sta=
+rtStreaming() | | + startStreaming() | | - stopButton | | + stopStreaming()=
+ | | + pauseStreaming() | | - seekSlider | | + getFrame() | | + stopStreami=
+ng() | | - volumeSlider | +-------------------------+ +--------------------=
+------+ +-------------------------+ ^ ^ ^ | | | | | | +------------------+ =
++----------------------------------+ | +----------------------------+ | Vid=
+eoWidget | +----------------------------+ | - displayArea | | + renderVideo=
+Frame() | +----------------------------+ </code></p>
+<h3 id=3D"MVVMPatternforaVideoStreamingApplication-ExplanationofComponents"=
+>Explanation of Components</h3>
+<h4 id=3D"MVVMPatternforaVideoStreamingApplication-1.StreamReceiver(Model)"=
+>1. <strong>StreamReceiver (Model)</strong></h4>
+<ul>
+<li>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>
+<p>Handles receiving the video stream data. This could be an RTSP, HTTP str=
+eam, or any other video format.</p></li>
+<li>
+<p>It processes the raw stream data and provides it to the ViewModel for re=
+ndering.</p></li>
+<li>
+<p>Provides methods to start and stop the video stream.</p></li>
+</ul></li>
+<li>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>
+<p><code>startStreaming()</code>: Initiates the video stream.</p></li>
+<li>
+<p><code>stopStreaming()</code>: Stops the video stream.</p></li>
+<li>
+<p><code>getFrame()</code>: Fetches the next frame for display.</p></li>
+</ul></li>
+</ul>
+<h4 id=3D"MVVMPatternforaVideoStreamingApplication-2.VideoDecoder(Model)">2=
+. <strong>VideoDecoder (Model)</strong></h4>
+<ul>
+<li>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>
+<p>Decodes the raw video stream data into frames that can be rendered to th=
+e screen.</p></li>
+<li>
+<p>You could use Qt Multimedia or third-party libraries like FFmpeg for thi=
+s part.</p></li>
+</ul></li>
+</ul>
+<h4 id=3D"MVVMPatternforaVideoStreamingApplication-3.VideoViewModel(ViewMod=
+el)">3. <strong>VideoViewModel (ViewModel)</strong></h4>
+<ul>
+<li>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>
+<p>Acts as the intermediary between the Model (video streaming and decoding=
+ logic) and the View (UI components).</p></li>
+<li>
+<p>It updates the <code>MainWindow</code> when the state of the video strea=
+m changes (e.g., play, pause, stop).</p></li>
+<li>
+<p>Handles commands from the View (e.g., play, pause, seek, volume control)=
+ and calls the appropriate methods on the <code>StreamReceiver</code>.</p><=
+/li>
+</ul></li>
+<li>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>
+<p><code>startStreaming()</code>: Informs the <code>StreamReceiver</code> t=
+o start streaming.</p></li>
+<li>
+<p><code>pauseStreaming()</code>: Pauses the stream by invoking the <code>S=
+treamReceiver</code>.</p></li>
+<li>
+<p><code>stopStreaming()</code>: Stops the stream.</p></li>
+</ul></li>
+<li>
+<p><strong>Signals and Slots</strong>:</p>
+<ul>
+<li>
+<p>Bind the stream data from the <code>StreamReceiver</code> to update the =
+<code>VideoWidget</code> in the <code>MainWindow</code>.</p></li>
+</ul></li>
+</ul>
+<h4 id=3D"MVVMPatternforaVideoStreamingApplication-4.MainWindow(View)">4. <=
+strong>MainWindow (View)</strong></h4>
+<ul>
+<li>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>
+<p>Contains the UI layout (buttons, sliders, etc.).</p></li>
+<li>
+<p>Displays video using <code>VideoWidget</code>.</p></li>
+<li>
+<p>Sends user commands (e.g., play, pause, volume) to the ViewModel for pro=
+cessing.</p></li>
+<li>
+<p>Displays video controls (buttons for play, pause, etc.) and handles user=
+ interaction.</p></li>
+</ul></li>
+<li>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>
+<p><code>renderVideoFrame()</code>: Calls the ViewModel to display the curr=
+ent video frame in the UI.</p></li>
+<li>
+<p><code>handlePlayButton()</code>: Invokes <code>VideoViewModel::startStre=
+aming()</code>.</p></li>
+<li>
+<p><code>handlePauseButton()</code>: Invokes <code>VideoViewModel::pauseStr=
+eaming()</code>.</p></li>
+<li>
+<p><code>handleSeekSlider()</code>: Adjusts playback position via <code>Vid=
+eoViewModel</code>.</p></li>
+</ul></li>
+</ul>
+<h4 id=3D"MVVMPatternforaVideoStreamingApplication-5.VideoWidget(View)">5. =
+<strong>VideoWidget (View)</strong></h4>
+<ul>
+<li>
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+<li>
+<p>A custom widget that handles rendering the video stream on the screen.</=
+p></li>
+<li>
+<p>It listens for updates from the ViewModel and refreshes the UI to displa=
+y new frames.</p></li>
+</ul></li>
+<li>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>
+<p><code>renderVideoFrame()</code>: Draws the current frame onto the widget=
+ for display.</p></li>
+</ul></li>
+</ul>
+<h3 id=3D"MVVMPatternforaVideoStreamingApplication-HowItWorks">How It Works=
+</h3>
+<ol start=3D"1">
+<li>
+<p><strong>MainWindow</strong> (View) initializes the <strong>VideoViewMode=
+l</strong> (ViewModel), which in turn interacts with the <strong>StreamRece=
+iver</strong> (Model) to start streaming the video.</p></li>
+<li>
+<p><strong>StreamReceiver</strong> starts fetching the video stream data an=
+d hands the frames over to the <strong>VideoViewModel</strong>.</p></li>
+<li>
+<p><strong>VideoViewModel</strong> updates the <strong>VideoWidget</strong>=
+ (View) with new frames.</p></li>
+<li>
+<p>User actions (e.g., pause, play, adjust volume) in the <strong>MainWindo=
+w</strong> are handled by the <strong>VideoViewModel</strong>, which update=
+s the <strong>StreamReceiver</strong> accordingly.</p></li>
+</ol>
+<h3 id=3D"MVVMPatternforaVideoStreamingApplication-Conclusion">Conclusion</=
+h3>
+<p>This diagram represents the MVVM architecture applied to a video streami=
+ng application in Qt. The <strong>Model</strong> deals with the video data =
+and streaming logic, while the <strong>ViewModel</strong> handles user acti=
+ons and updates the <strong>View</strong> accordingly, maintaining a clear =
+separation of concerns.</p>
+    </div>
+</body>
+</html>
+------=_Part_0_107126640.1742024750741--
